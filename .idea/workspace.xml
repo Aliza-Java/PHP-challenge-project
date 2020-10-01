@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="014fdd75-4b88-4c51-85d1-7b948dd93418" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../GithubPractice" beforeDir="false" afterPath="$PROJECT_DIR$/../GithubPractice" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1hvBe4vaOBUoOxlAEvzmvdK6Oms" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="php.test.frameworks.configurable" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Aliza\PhpstormProjects\Interview\tests" />
+      <recent name="C:\Users\Aliza\PhpstormProjects\Interview" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHPUnit.Local Unit Tests">
+    <configuration name="Local Unit Tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" coverage_engine="PHPDBG" scope="XML" />
+      <method v="2" />
+    </configuration>
+    <configuration name="nodeTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner class="nodeTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/nodeTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="node.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/node.php">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <method v="2" />
+    </configuration>
+    <configuration name="start.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/start.php">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="PHP Script.start.php" />
+      <item itemvalue="PHP Script.node.php" />
+      <item itemvalue="PHPUnit.nodeTest" />
+      <item itemvalue="PHPUnit.Local Unit Tests" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="014fdd75-4b88-4c51-85d1-7b948dd93418" name="Default Changelist" comment="" />
+      <created>1600881777272</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600881777272</updated>
+      <workItem from="1600881778324" duration="7750000" />
+      <workItem from="1600894596594" duration="559000" />
+      <workItem from="1600942244657" duration="3887000" />
+      <workItem from="1600947256128" duration="17779000" />
+      <workItem from="1601024920828" duration="2104000" />
+      <workItem from="1601149270265" duration="8370000" />
+      <workItem from="1601319838452" duration="10238000" />
+      <workItem from="1601365576248" duration="597000" />
+      <workItem from="1601387192609" duration="2975000" />
+      <workItem from="1601489555690" duration="1074000" />
+      <workItem from="1601564618380" duration="434000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="426" y="108" key="#Inspections" timestamp="1601328729317">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="426" y="108" key="#Inspections/0.0.1600.860@0.0.1600.860" timestamp="1601328729317" />
+    <state x="507" y="72" key="#PHP" timestamp="1600881976635">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="507" y="72" key="#PHP/0.0.1600.860@0.0.1600.860" timestamp="1600881976635" />
+    <state x="239" y="129" key="#Test_Frameworks" timestamp="1600961575837">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="239" y="129" key="#Test_Frameworks/0.0.1600.860@0.0.1600.860" timestamp="1600961575837" />
+    <state x="232" y="97" width="1092" height="763" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600962532250">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="232" y="97" width="1092" height="763" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1600962532250" />
+    <state x="200" y="120" width="1200" height="620" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1601325720998">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="200" y="120" width="1200" height="620" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1600.860@0.0.1600.860" timestamp="1601325720998" />
+    <state x="561" y="184" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600944962508">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="561" y="184" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1600944962508" />
+    <state x="425" y="0" key="CommitChangelistDialog2" timestamp="1601565039290">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="425" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1601565039290" />
+    <state x="399" y="214" key="FileChooserDialogImpl" timestamp="1601490658283">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="399" y="214" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1601490658283" />
+    <state width="1340" height="334" key="GridCell.Tab.0.bottom" timestamp="1601330162472">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1340" height="334" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1601330162472" />
+    <state width="1340" height="334" key="GridCell.Tab.0.center" timestamp="1601330162472">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1340" height="334" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1601330162472" />
+    <state width="1340" height="334" key="GridCell.Tab.0.left" timestamp="1601330162472">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1340" height="334" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1601330162472" />
+    <state width="1340" height="334" key="GridCell.Tab.0.right" timestamp="1601330162472">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1340" height="334" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1601330162472" />
+    <state x="570" y="152" key="NewPhpClassDialog" timestamp="1600971489491">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="570" y="152" key="NewPhpClassDialog/0.0.1600.860@0.0.1600.860" timestamp="1600971489491" />
+    <state x="301" y="74" key="SettingsEditor" timestamp="1600948051244">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="301" y="74" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1600948051244" />
+    <state x="392" y="162" key="Vcs.Push.Dialog.v2" timestamp="1601489906150">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="392" y="162" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1601489906150" />
+    <state x="513" y="311" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1601564899254">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="513" y="311" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1600.860@0.0.1600.860" timestamp="1601564899254" />
+    <state x="576" y="202" key="refactoring.ChangeSignatureDialog" timestamp="1601329669121">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="576" y="202" key="refactoring.ChangeSignatureDialog/0.0.1600.860@0.0.1600.860" timestamp="1601329669121" />
+    <state x="463" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1601324908268">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="463" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1601324908268" />
+  </component>
+</project>

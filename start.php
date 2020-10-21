@@ -1,5 +1,5 @@
 <?php
-include 'node.php';
+include 'hierarchy.php';
 
 $myarray = [
     ['id'=>2, 'parent'=>1, 'value'=>'child 1'],

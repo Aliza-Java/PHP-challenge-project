@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="014fdd75-4b88-4c51-85d1-7b948dd93418" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../GithubPractice" beforeDir="false" afterPath="$PROJECT_DIR$/../GithubPractice" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node.php" beforeDir="false" afterPath="$PROJECT_DIR$/hierarchy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/start.php" beforeDir="false" afterPath="$PROJECT_DIR$/start.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/nodeTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/nodeTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +24,7 @@
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$/.." value="master" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -94,7 +99,7 @@
       <TestRunner class="nodeTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/nodeTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="node.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/node.php">
+    <configuration name="hierarchy.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/hierarchy.php">
       <CommandLine>
         <PhpTestInterpreterSettings>
           <option name="interpreterName" value="PHP" />
@@ -112,9 +117,9 @@
     </configuration>
     <list>
       <item itemvalue="PHP Script.start.php" />
-      <item itemvalue="PHP Script.node.php" />
-      <item itemvalue="PHPUnit.nodeTest" />
       <item itemvalue="PHPUnit.Local Unit Tests" />
+      <item itemvalue="PHPUnit.nodeTest" />
+      <item itemvalue="PHP Script.hierarchy.php" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -135,7 +140,11 @@
       <workItem from="1601365576248" duration="597000" />
       <workItem from="1601387192609" duration="2975000" />
       <workItem from="1601489555690" duration="1074000" />
-      <workItem from="1601564618380" duration="434000" />
+      <workItem from="1601564618380" duration="1138000" />
+      <workItem from="1601623842065" duration="3310000" />
+      <workItem from="1602573982055" duration="642000" />
+      <workItem from="1603199143652" duration="6000" />
+      <workItem from="1603271288148" duration="4476000" />
     </task>
     <servers />
   </component>
@@ -167,30 +176,30 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="561" y="184" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1600.860@0.0.1600.860" timestamp="1600944962508" />
-    <state x="425" y="0" key="CommitChangelistDialog2" timestamp="1601565039290">
+    <state x="425" y="0" key="CommitChangelistDialog2" timestamp="1601565540788">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="425" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1601565039290" />
+    <state x="425" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1601565540788" />
     <state x="399" y="214" key="FileChooserDialogImpl" timestamp="1601490658283">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="399" y="214" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1601490658283" />
-    <state width="1340" height="334" key="GridCell.Tab.0.bottom" timestamp="1601330162472">
+    <state width="778" height="358" key="GridCell.Tab.0.bottom" timestamp="1603275312260">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1340" height="334" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1601330162472" />
-    <state width="1340" height="334" key="GridCell.Tab.0.center" timestamp="1601330162472">
+    <state width="778" height="358" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1603275312260" />
+    <state width="778" height="358" key="GridCell.Tab.0.center" timestamp="1603275312260">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1340" height="334" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1601330162472" />
-    <state width="1340" height="334" key="GridCell.Tab.0.left" timestamp="1601330162472">
+    <state width="778" height="358" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1603275312260" />
+    <state width="778" height="358" key="GridCell.Tab.0.left" timestamp="1603275312260">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1340" height="334" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1601330162472" />
-    <state width="1340" height="334" key="GridCell.Tab.0.right" timestamp="1601330162472">
+    <state width="778" height="358" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1603275312260" />
+    <state width="778" height="358" key="GridCell.Tab.0.right" timestamp="1603275312260">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1340" height="334" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1601330162472" />
+    <state width="778" height="358" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1603275312260" />
     <state x="570" y="152" key="NewPhpClassDialog" timestamp="1600971489491">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -199,10 +208,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="74" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1600948051244" />
-    <state x="392" y="162" key="Vcs.Push.Dialog.v2" timestamp="1601489906150">
+    <state x="392" y="162" key="Vcs.Push.Dialog.v2" timestamp="1601565577485">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="162" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1601489906150" />
+    <state x="392" y="162" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1601565577485" />
     <state x="513" y="311" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1601564899254">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

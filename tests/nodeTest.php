@@ -37,16 +37,6 @@ class nodeTest extends TestCase
 
 
     //Node->getValue() tests
-    function testGetValueNoValueFoundThrowsException()
-    {
-        $myNode = new Node(1, 2, null);
-
-        $this->expectException(Exception::class);
-        $this->expectExceptionMessage('No value found.');
-        $myNode->getValue();
-    }
-
-
     function testGetValueReturnsValue()
     {
         $myNode = new Node(1, 2, 'my value');
@@ -59,8 +49,7 @@ class nodeTest extends TestCase
     //Tree->setData() tests
     function testIncomingNullThrowsException()
     {
-        $this->expectException(Exception::class);
-        $this->expectExceptionMessage('No data received.');
+        $this->expectException(NoDataReceivedException::class);
 
         $myTree = new Tree();
         $myTree->setData(null);
@@ -71,8 +60,7 @@ class nodeTest extends TestCase
         global $sampleArray;
         $anotherArray = [[4, 5, 'value2'], [6, 7, 'value3']];
 
-        $this->expectException(Exception::class);
-        $this->expectExceptionMessage('Data has already been initialized.');
+        $this->expectException(DataAlreadySetException::class);
 
         $myTree = new Tree();
 
@@ -83,8 +71,8 @@ class nodeTest extends TestCase
     function testIncomingDataNotArrayThrowsException()
     {
 
-        $this->expectException(Exception::class);
-        $this->expectExceptionMessage('Incoming data is not an array.');
+        $this->expectException(WrongFormatException::class);
+        //$this->expectExceptionMessage('Incoming data is not an array.');
 
         $myTree = new Tree();
 
@@ -100,8 +88,8 @@ class nodeTest extends TestCase
             ['id' => 4, 'parent' => 2, 'value' => 'grandchild']
         ];
 
-        $this->expectException(Exception::class);
-        $this->expectExceptionMessage('Found nodes not set in correct format: id, parent, value.');
+        $this->expectException(WrongFormatException::class);
+        //$this->expectExceptionMessage('Found nodes not set in correct format: id, parent, value.');
 
         $myTree = new Tree();
 
@@ -136,18 +124,19 @@ class nodeTest extends TestCase
 
     //Tree->getRoot() tests
     //If a node doesn't actually have a root, returned result should be null
-    function testGetRootWithNoRootReturnsNull()
+    function testGetRootWithNoRootThrowsException()
     {
         $rootlessArray = [['id' => 2, 'parent' => 1, 'value' => 'child1'],
-            ['id' => 5, 'parent' => 4, 'value' => 'greatgrandchild'],
+            ['id' => 5, 'parent' => 4, 'value' => 'great-grandchild'],
             ['id' => 3, 'parent' => 1, 'value' => 'child2'],
             ['id' => 4, 'parent' => 2, 'value' => 'grandchild']];
+
+        $this->expectException(ObjectNotFoundException::class);
 
         $myTree = new Tree();
         $myTree->setData($rootlessArray);
 
-        $root = $myTree->getRoot();
-        $this->assertNull($root);
+        $myTree->getRoot();
     }
 
     function testGetRootReturnsRoot()
@@ -165,14 +154,29 @@ class nodeTest extends TestCase
 
     //Tree->getParent() tests
 
-    function testGetParentChildNotFoundReturnsNull()
+    function testGetParentChildNotFoundThrowsException()
     {
         global $sampleArray;
 
+        $this->expectException(NodeNotFoundException::class);
         $myTree = new Tree();
         $myTree->setData($sampleArray);
-        $parent = $myTree->getParent(6);
-        $this->assertNull($parent);
+        $myTree->getParent(6);
+    }
+
+    function testGetParentParentNotFoundThrowsException()
+    {
+        $noParentArray = [
+            ['id' => 2, 'parent' => 7, 'value' => 'child1'],
+            ['id' => 1, 'parent' => null, 'value' => 'root'],
+            ['id' => 3, 'parent' => 1, 'value' => 'child2'],
+            ['id' => 4, 'parent' => 2, 'value' => 'grandchild']
+        ];;
+
+        $this->expectException(ParentNotFoundException::class);
+        $myTree = new Tree();
+        $myTree->setData($noParentArray);
+        $myTree->getParent(2);
     }
 
     function testGetParentReturnsChild()
@@ -192,11 +196,13 @@ class nodeTest extends TestCase
     {
         global $sampleArray;
 
+        $this->expectException(NodeNotFoundException::class);
+
         $myTree = new Tree();
         $myTree->setData($sampleArray);
 
-        $result = $myTree->getNode(5);
-        $this->assertNull($result);
+        $myTree->getNode(5);
+
     }
 
     function testGetNodeReturnsNode()
@@ -234,8 +240,7 @@ class nodeTest extends TestCase
         $myTree = new Tree();
         $myTree->setData($sampleArray);
 
-        $this->expectException(Exception::class);
-        $this->expectExceptionMessage('Id not found.');
+        $this->expectException(NodeNotFoundException::class);
         $myTree->getChildren(5);
     }
 
@@ -264,8 +269,7 @@ class nodeTest extends TestCase
         $myTree = new Tree();
         $myTree->setData($sampleArray);
 
-        $this->expectException(Exception::class);
-        $this->expectExceptionMessage('Id not found');
+        $this->expectException(NodeNotFoundException::class);
         $myTree->getNodeValue(5);
     }
 

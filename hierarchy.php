@@ -17,9 +17,6 @@ class Node
     //Returns a node value by its id
     function getValue()
     {
-        if ($this->value === null) {
-            throw new Exception('No value found.');
-        }
         return $this->value;
     }
 }
@@ -30,21 +27,26 @@ class Tree
     public $data = array();
 
 //A one-time initialization of $data
+    /*
+     * @throws NoDataReceivedException if incoming data is null.
+     * @throws DataAlreadySetException if data has been set previously.
+     * @throws WrongFormatException if data comes in in a format other than array.
+      * */
     function setData($incomingData)
     {
 
         if ($incomingData === null) {
-            throw new Exception('No data received.');
+            throw new NoDataReceivedException('No data received.');
         }
 
         //Ensuring data has not been initialized already
         if (!empty($this->data)) {
-            throw new Exception('Data has already been initialized.');
+            throw new DataAlreadySetException('Data has already been initialized.');
         }
 
         //Check if data is an array
         if (!is_array($incomingData)) {
-            throw new Exception('Incoming data is not an array.');
+            throw new WrongFormatException('Incoming data is not an array.');
         }
 
         //Loading the data as an array of Nodes
@@ -52,7 +54,7 @@ class Tree
             try { //Incoming arrays may not be of correct format
                 $nextNode = new Node($node['id'], $node['parent'], $node['value']);
             } catch (Exception $ex) {
-                throw new Exception('Found nodes not set in correct format: id, parent, value.');
+                throw new WrongFormatException('Found nodes not set in correct format: id, parent, value.');
             }
 
             array_push($this->data, $nextNode);
@@ -61,6 +63,9 @@ class Tree
     }
 
 //Find root of data
+    /*
+         * @throws ObjectNotFound if no root was found.
+          * */
     function getRoot()
     {
 
@@ -72,25 +77,33 @@ class Tree
                 $result = $node;
             }
         }
-        return $result;
-    }
-
-    //Get the parent node by a child's id
-    function getParent($childId)
-    {
-        $result = null;
-
-        //Looping through all nodes to find parent with matching id
-        foreach ($this->data as $node) {
-            if ((($node->id) === $childId) && (!$result)) {
-                //Getting actual node by id of parent
-                $result = $this->getNode($node->parent);
-            }
+        if ($result === null) {
+            throw new ObjectNotFoundException('Root');
         }
         return $result;
     }
 
+    //Get the parent node by a child's id
+    /*
+     * @throws ParentNotFoundException if the parent node was not found.
+      * */
+    function getParent($childId)
+    {
+        $result = null;
+        $childnode = $this->getNode($childId);
+        $parentNode = null;
+        try {
+            $parentNode = $this->getNode($childnode->parent);
+        } catch (ObjectNotFoundException $ex) {
+            throw new ParentNotFoundException();
+        }
+        return $parentNode;
+    }
+
     //A helper function to get complete Node by id
+    /*
+     * @throws NodeNotFoundException if incoming data is null.
+    * */
     function getNode($id)
     {
         $result = null;
@@ -100,6 +113,10 @@ class Tree
                 $result = $node;
             }
         }
+        if ($result === null) {
+            throw new NodeNotFoundException('Node with id: ' . $id . ' not found.');
+        }
+
         return $result;
     }
 
@@ -108,9 +125,7 @@ class Tree
     {
         $children = array();
 
-        if ($this->getNode($parentId) === null) {
-            throw new Exception('Id not found.');
-        }
+        $this->getNode($parentId); //Ensuring parent exists. Exception will be thrown from getNode() function if not.
 
         foreach ($this->data as $node) {
             if ($node->parent === $parentId) {
@@ -127,11 +142,87 @@ class Tree
     {
         $node = $this->getNode($nodeId);
 
-        if ($node === null) { //Node was not found
-            throw new Exception('Id not found.');
-        }
-
         return $node->getValue();
     }
 
+}
+
+
+//Various custom exceptions
+
+class NoValueException extends Exception
+{
+    public function errorMessage()
+    {
+        //error message
+        $errorMsg = 'Error on line ' . $this->getLine() . ' in ' . $this->getFile()
+            . ': <b>' . $this->getMessage();
+        return $errorMsg;
+    }
+}
+
+class NoDataReceivedException extends Exception
+{
+    public function errorMessage()
+    {
+        //error message
+        $errorMsg = 'Error on line ' . $this->getLine() . ' in ' . $this->getFile()
+            . ': <b>' . $this->getMessage();
+        return $errorMsg;
+    }
+}
+
+class DataAlreadySetException extends Exception
+{
+    public function errorMessage()
+    {
+        //error message
+        $errorMsg = 'Error on line ' . $this->getLine() . ' in ' . $this->getFile()
+            . ': <b>' . $this->getMessage();
+        return $errorMsg;
+    }
+}
+
+class WrongFormatException extends Exception
+{
+    public function errorMessage()
+    {
+        //error message
+        $errorMsg = 'Error on line ' . $this->getLine() . ' in ' . $this->getFile()
+            . ': <b>' . $this->getMessage();
+        return $errorMsg;
+    }
+}
+
+class ObjectNotFoundException extends Exception
+{
+    public function errorMessage($whatNotFound)
+    {
+        //error message
+        $errorMsg = 'Error on line ' . $this->getLine() . ' in ' . $this->getFile()
+            . ': <b>' . $this->getMessage() . '' . $whatNotFound . ' not found.';
+        return $errorMsg;
+    }
+}
+
+class ParentNotFoundException extends ObjectNotFoundException
+{
+    public function errorMessage($whatNotFound)
+    {
+        //error message
+        $errorMsg = 'Error on line ' . $this->getLine() . ' in ' . $this->getFile()
+            . ': <b>' . $this->getMessage();
+        return $errorMsg;
+    }
+}
+
+class NodeNotFoundException extends ObjectNotFoundException
+{
+    public function errorMessage($whatNotFound)
+    {
+        //error message
+        $errorMsg = 'Error on line ' . $this->getLine() . ' in ' . $this->getFile()
+            . ': <b>' . $this->getMessage();
+        return $errorMsg;
+    }
 }
